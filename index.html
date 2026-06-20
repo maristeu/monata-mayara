@@ -70,11 +70,11 @@
             font-size: 0.875rem;
         }
 
-        /* === HEADER === */
+       /* === HEADER === */
         header {
             position: fixed;
             top: 0; left: 0; width: 100%;
-            background-color: rgba(250, 250, 250, 0.95);
+            background-color: rgba(26, 20, 18, 0.98); /* Fundo escuro premium para destacar a logo */
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(197, 157, 95, 0.2);
@@ -98,15 +98,15 @@
             height: 100vh;
             min-height: 600px;
             display: flex;
-            align-items: flex-start; /* Joga o texto para o topo */
-            background: url('hero-mobile.jpg') center bottom/cover no-repeat; /* Puxa a foto mobile e alinha por baixo */
+            align-items: flex-start;
+            background: url('hero-mobile.jpg') center bottom/cover no-repeat;
             color: var(--text-light);
             text-align: center;
-            padding-top: 140px; /* Dá um respiro maior em relação ao header no celular */
+            padding-top: 100px; /* Reduzido de 140px para puxar o bloco para cima */
         }
         .hero-inner { max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); color: var(--text-light);}
-        .hero p { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 300; margin-bottom: 2.5rem; color: #EAEAEA; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 4.5rem); margin-bottom: 1rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); color: var(--text-light);}
+        .hero p { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 300; margin-bottom: 1.5rem; color: #EAEAEA; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
 
         /* === ESTRUTURA === */
         .estrutura { padding: 6rem 0; background-color: var(--bg-light); }
@@ -226,12 +226,14 @@
         @media (min-width: 768px) {
             .header-cta { display: block; }
             
-            /* ADICIONE ESTE BLOCO AQUI PARA O DESKTOP */
+            /* DEVOLVENDO O ESPAÇAMENTO PARA O DESKTOP */
             .hero {
-                align-items: center; /* Volta a centralizar o texto */
-                padding-top: 80px; /* Volta o padding original */
-                background: url('hero-bg.jpg') center/cover no-repeat; /* Volta para a imagem larga original */
+                align-items: center; 
+                padding-top: 80px; 
+                background: url('hero-bg.jpg') center/cover no-repeat; 
             }
+            .hero h1 { margin-bottom: 1.5rem; }
+            .hero p { margin-bottom: 2.5rem; }
             /* ======================================== */
 
             .estrutura-grid { flex-direction: row; justify-content: space-between; }
