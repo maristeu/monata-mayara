@@ -92,18 +92,17 @@
         
         .header-cta { display: none; }
 
-        /* === HERO SECTION === */
+       /* === HERO SECTION === */
         .hero {
             position: relative;
             height: 100vh;
             min-height: 600px;
             display: flex;
-            align-items: center;
-            /* Fundo limpo sem o gradiente CSS, exibindo a imagem já tratada por você */
-            background: url('hero-bg.jpg') center/cover no-repeat;
+            align-items: flex-start; /* Joga o texto para o topo */
+            background: url('hero-mobile.jpg') center bottom/cover no-repeat; /* Puxa a foto mobile e alinha por baixo */
             color: var(--text-light);
             text-align: center;
-            padding-top: 80px;
+            padding-top: 140px; /* Dá um respiro maior em relação ao header no celular */
         }
         .hero-inner { max-width: 800px; margin: 0 auto; }
         .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); color: var(--text-light);}
@@ -223,9 +222,20 @@
         .footer-map { border-radius: 4px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
         .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; font-size: 0.85rem; color: #888; }
 
-        /* === RESPONSIVO === */
+       /* === RESPONSIVO === */
         @media (min-width: 768px) {
             .header-cta { display: block; }
+            
+            /* ADICIONE ESTE BLOCO AQUI PARA O DESKTOP */
+            .hero {
+                align-items: center; /* Volta a centralizar o texto */
+                padding-top: 80px; /* Volta o padding original */
+                background: url('hero-bg.jpg') center/cover no-repeat; /* Volta para a imagem larga original */
+            }
+            /* ======================================== */
+
+            .estrutura-grid { flex-direction: row; justify-content: space-between; }
+            /* ... resto do código continua igual ... */
             .estrutura-grid { flex-direction: row; justify-content: space-between; }
             .estrutura-card { flex: 1; }
             .fundadora-content { flex-direction: row; gap: 5rem; }
