@@ -186,9 +186,22 @@
         }
         .carrossel-container::-webkit-scrollbar { display: none; }
         .depoimento-card {
-            flex: 0 0 85%; scroll-snap-align: center; background: #FFF; padding: 3rem 2rem;
-            border-radius: 4px; border: 1px solid rgba(197, 157, 95, 0.1);
-            box-shadow: 0 10px 25px rgba(26, 20, 18, 0.02); display: flex; flex-direction: column; justify-content: space-between;
+            background-color: #FFFFFF;
+            border: 1px solid rgba(26, 20, 18, 0.03); /* Borda super sutil */
+            border-top: 4px solid var(--gold-primary); /* A mágica acontece aqui: Barra dourada no topo */
+            border-radius: 8px; /* Cantos arredondados modernos */
+            box-shadow: 0 15px 35px rgba(26, 20, 18, 0.08); /* Sombra mais ampla e elegante */
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efeito interativo que levanta o cartão levemente */
+        .depoimento-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(197, 157, 95, 0.12); /* A sombra ganha um tom dourado de fundo */
         }
         .depoimento-texto { font-style: italic; color: #4A423F; font-size: 1.05rem; margin-bottom: 2rem; position: relative; }
         .depoimento-texto::before {
