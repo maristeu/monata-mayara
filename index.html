@@ -260,6 +260,32 @@
             .carrossel-instrucao { display: none; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
+        /* === CORREÇÕES ESPECÍFICAS PARA MOBILE (CELULAR) === */
+        @media (max-width: 768px) {
+            
+            /* 1. Afinando a barra do topo (Header) */
+            header {
+                padding: 10px 0 !important; /* Reduz drasticamente o "estofamento" da barra */
+            }
+            .logo img {
+                max-height: 50px !important; /* Reduz um pouco a logo apenas no celular para não alargar a barra */
+            }
+
+            /* 2. Centralizando o conteúdo do Rodapé (Footer) */
+            .footer-info {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-logo {
+                margin: 0 auto 1.5rem auto !important; /* Força a imagem a ficar no centro exato */
+            }
+            .footer-links {
+                justify-content: center; /* Centraliza os links de WhatsApp e Instagram */
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
